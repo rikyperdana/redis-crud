@@ -3,25 +3,15 @@ This is a CRUD (Create, Read, Update, Delete) built on top of ExpressJS.
 
 ## Preparation
 `git clone https://github.com/rikyperdana/express-crud`
-
-Create a file named `.env` inside the folder that contain this line:
-
-`MONGO="your mongo connection string"`
-
-Ex: I got my connection string from Atlas connect menu.
-If you're using localhost then:
-`MONGO="mongodb://localhost:27017"`
+`npm install`
 
 ## Start
-```
-npm install
-node server.js
-```
+`node server.js`
 
-Get to http://localhost:3000
+Get to http://localhost:3100
 
 ## How to Use
-- Click 'Get Collection' button and fill the database and collection name as target
+- Click 'Get Collection' button and fill the collection name as target
 - Use 'Refresh' button to reload the collection from source
 - Use 'Add' to insert a new object into the collection
 - Double click a row to display the 'Update' and 'Delete' function
@@ -39,7 +29,7 @@ poster('dbCall', {
 ### Server Side
 - Express JS
 - dotenv
-- mongodb
+- redis
 ### Client Side
 - Lodash
 - Mithril
