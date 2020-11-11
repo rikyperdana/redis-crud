@@ -23,7 +23,7 @@ Get to http://localhost:3100
 You can also use the REST API programmatically through browser console, like:
 ```
 poster('dbCall', {
-  method: 'get', dbName: 'yourDb', collName: 'yourCollection'
+  method: 'get', collName: 'yourCollection'
 }, res => console.log(res))
 ```
 
