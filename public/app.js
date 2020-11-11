@@ -21,7 +21,7 @@ makeModal = name => m('.modal',
 )
 
 m.mount(document.body, {view: () => m('.container', m('.content',
-  m('h1', 'Express CRUD'),
+  m('h1', 'Redis CRUD'),
 
   // Top row buttons
   m('.buttons',
