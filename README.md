@@ -2,8 +2,10 @@
 This is a CRUD (Create, Read, Update, Delete) built on top of ExpressJS + RedisDB.
 
 ## Preparation
-`git clone https://github.com/rikyperdana/redis-crud`
-`npm install`
+```
+git clone https://github.com/rikyperdana/redis-crud
+npm install
+```
 
 ## Start
 `node server.js`
