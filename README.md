@@ -1,8 +1,8 @@
-# Express CRUD
-This is a CRUD (Create, Read, Update, Delete) built on top of ExpressJS.
+# Redis CRUD
+This is a CRUD (Create, Read, Update, Delete) built on top of ExpressJS + RedisDB.
 
 ## Preparation
-`git clone https://github.com/rikyperdana/express-crud`
+`git clone https://github.com/rikyperdana/redis-crud`
 `npm install`
 
 ## Start
