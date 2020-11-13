@@ -85,7 +85,7 @@ m.mount(document.body, {view: () => m('.container', m('.content',
           new Blob([
             [state.collData.map(i => sanitize(JSON.stringify(i))+';').join('\n')]
           ], {type: 'text/csv;charset=utf-8;'})
-        ), state.target.dbName+'-'+state.target.collName+'-'+Date()+'.csv')
+        ), state.target.collName+'-'+Date()+'.csv')
       }, 'Export'),
       m('.button.is-warning', m('.file.is-warning', m('label.file-label',
         m('input.file-input', {type: 'file', name: 'import', onchange: e =>
@@ -100,7 +100,7 @@ m.mount(document.body, {view: () => m('.container', m('.content',
         m('span.file-cta', m('span.file-label', 'Import'))
       ))),
       m('.button.is-danger', {
-        ondblclick: () => confirm('Are you sure to drop this collection?')
+        onclick: () => confirm('Are you sure to drop this collection?')
         && poster('dbCall', {
           ...state.target, method: 'deleteMany'
         }, console.log)
@@ -132,7 +132,7 @@ m.mount(document.body, {view: () => m('.container', m('.content',
     m('thead', m('tr', m('th', '#'), m('th', 'Document'))),
     m('tbody', (state.searchResults || state.collData || []).map((i, j) => m('tr',
       {
-        ondblclick: () => state.modalItem = m('.box',
+        onclick: () => state.modalItem = m('.box',
           m(autoForm({
             id: 'updateItem',
             schema:{ content: {
@@ -149,7 +149,7 @@ m.mount(document.body, {view: () => m('.container', m('.content',
             submit: {value: 'Update', class: 'is-warning'}
           })),
           m('.button.is-danger', {
-            ondblclick: () => [
+            onclick: () => [
               poster('dbCall', {
                 method: 'remove', _id: i._id,
                 ...state.target
